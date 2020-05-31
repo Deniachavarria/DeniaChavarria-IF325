@@ -105,6 +105,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="validacionconerrorprovider.Designer.vb">
+      <DependentUpon>validacionconerrorprovider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="validacionconerrorprovider.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="validacionybotonlimpiar.Designer.vb">
       <DependentUpon>validacionybotonlimpiar.vb</DependentUpon>
     </Compile>
@@ -124,6 +130,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="validacionconerrorprovider.resx">
+      <DependentUpon>validacionconerrorprovider.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="validacionybotonlimpiar.resx">
       <DependentUpon>validacionybotonlimpiar.vb</DependentUpon>
