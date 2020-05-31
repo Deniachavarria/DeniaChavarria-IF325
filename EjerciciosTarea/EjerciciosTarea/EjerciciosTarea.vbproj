@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{56B9E206-346A-4680-9AC6-172DC83A9D19}</ProjectGuid>
+    <ProjectGuid>{86D6C013-C67A-43D9-A37D-1F8231A86B81}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>EjerciciosClase.My.MyApplication</StartupObject>
-    <RootNamespace>EjerciciosClase</RootNamespace>
-    <AssemblyName>EjerciciosClase</AssemblyName>
+    <StartupObject>EjerciciosTarea.My.MyApplication</StartupObject>
+    <RootNamespace>EjerciciosTarea</RootNamespace>
+    <AssemblyName>EjerciciosTarea</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>EjerciciosClase.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTarea.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>EjerciciosClase.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTarea.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,9 +46,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,24 +73,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factura.Designer.vb">
-      <DependentUpon>Factura.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Factura.vb">
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sumadedosvalorez.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sumadedosvalorez.Designer.vb">
-      <DependentUpon>sumadedosvalorez.vb</DependentUpon>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,32 +95,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="validacionybotonlimpiar.Designer.vb">
-      <DependentUpon>validacionybotonlimpiar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="validacionybotonlimpiar.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Factura.resx">
-      <DependentUpon>Factura.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sumadedosvalorez.resx">
-      <DependentUpon>sumadedosvalorez.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="validacionybotonlimpiar.resx">
-      <DependentUpon>validacionybotonlimpiar.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
