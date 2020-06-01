@@ -86,6 +86,12 @@
       <DependentUpon>ciclofor.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Facturasencilla.Designer.vb">
+      <DependentUpon>Facturasencilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturasencilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ciclofor.resx">
       <DependentUpon>ciclofor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturasencilla.resx">
+      <DependentUpon>Facturasencilla.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
