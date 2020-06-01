@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="4operacionesmatematicas.Designer.vb">
+      <DependentUpon>4operacionesmatematicas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4operacionesmatematicas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ciclofor.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,6 +104,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="4operacionesmatematicas.resx">
+      <DependentUpon>4operacionesmatematicas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ciclofor.resx">
       <DependentUpon>ciclofor.vb</DependentUpon>
     </EmbeddedResource>
