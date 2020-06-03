@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86D6C013-C67A-43D9-A37D-1F8231A86B81}</ProjectGuid>
+    <ProjectGuid>{C1594B4A-9A24-4C03-9A44-B627973A3969}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>EjerciciosTarea.My.MyApplication</StartupObject>
-    <RootNamespace>EjerciciosTarea</RootNamespace>
-    <AssemblyName>EjerciciosTarea</AssemblyName>
+    <StartupObject>EjerciciosTareas.My.MyApplication</StartupObject>
+    <RootNamespace>EjerciciosTareas</RootNamespace>
+    <AssemblyName>EjerciciosTareas</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>EjerciciosTarea.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTareas.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>EjerciciosTarea.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTareas.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -73,23 +73,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="4operacionesmatematicas.Designer.vb">
-      <DependentUpon>4operacionesmatematicas.vb</DependentUpon>
+    <Compile Include="DonantedeOrganos\Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
     </Compile>
-    <Compile Include="4operacionesmatematicas.vb">
+    <Compile Include="DonantedeOrganos\Bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ciclofor.vb">
-      <SubType>Form</SubType>
+    <Compile Include="DonantedeOrganos\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="ciclofor.Designer.vb">
-      <DependentUpon>ciclofor.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Facturasencilla.Designer.vb">
-      <DependentUpon>Facturasencilla.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Facturasencilla.vb">
+    <Compile Include="DonantedeOrganos\Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,41 +91,23 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="operacionesbasicasmasraizpotencia.Designer.vb">
-      <DependentUpon>operacionesbasicasmasraizpotencia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="operacionesbasicasmasraizpotencia.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="4operacionesmatematicas.resx">
-      <DependentUpon>4operacionesmatematicas.vb</DependentUpon>
+    <EmbeddedResource Include="DonantedeOrganos\Bienvenida.resx">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ciclofor.resx">
-      <DependentUpon>ciclofor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Facturasencilla.resx">
-      <DependentUpon>Facturasencilla.vb</DependentUpon>
+    <EmbeddedResource Include="DonantedeOrganos\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="operacionesbasicasmasraizpotencia.resx">
-      <DependentUpon>operacionesbasicasmasraizpotencia.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +122,17 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fot1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
