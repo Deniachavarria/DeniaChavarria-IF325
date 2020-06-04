@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1594B4A-9A24-4C03-9A44-B627973A3969}</ProjectGuid>
+    <ProjectGuid>{A5AC6A54-54D5-47AD-B51A-D4DD7ACBD044}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>EjerciciosTareas.My.MyApplication</StartupObject>
-    <RootNamespace>EjerciciosTareas</RootNamespace>
-    <AssemblyName>EjerciciosTareas</AssemblyName>
+    <StartupObject>EjerciciosTareaas.My.MyApplication</StartupObject>
+    <RootNamespace>EjerciciosTareaas</RootNamespace>
+    <AssemblyName>EjerciciosTareaas</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>EjerciciosTareas.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTareaas.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>EjerciciosTareas.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosTareaas.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -73,16 +73,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DonantedeOrganos\Bienvenida.Designer.vb">
-      <DependentUpon>Bienvenida.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DonantedeOrganos\Bienvenida.vb">
+    <Compile Include="Bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DonantedeOrganos\Login.Designer.vb">
+    <Compile Include="Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donantedeorgano.Designer.vb">
+      <DependentUpon>Donantedeorgano.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Donantedeorgano.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="DonantedeOrganos\Login.vb">
+    <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -91,6 +98,11 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -98,14 +110,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DonantedeOrganos\Bienvenida.resx">
+    <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DonantedeOrganos\Login.resx">
+    <EmbeddedResource Include="Donantedeorgano.resx">
+      <DependentUpon>Donantedeorgano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -121,18 +137,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llogin.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fot.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fot1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
