@@ -86,6 +86,12 @@
     <Compile Include="Donantedeorgano.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formulageneralcuadratica.Designer.vb">
+      <DependentUpon>formulageneralcuadratica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formulageneralcuadratica.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Donantedeorgano.resx">
       <DependentUpon>Donantedeorgano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulageneralcuadratica.resx">
+      <DependentUpon>formulageneralcuadratica.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
