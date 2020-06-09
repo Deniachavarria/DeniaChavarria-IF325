@@ -24,19 +24,20 @@ Partial Class formulageneralcuadratica
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtc = New System.Windows.Forms.TextBox()
+        Me.txtb = New System.Windows.Forms.TextBox()
+        Me.txta = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txta = New System.Windows.Forms.TextBox()
-        Me.txtb = New System.Windows.Forms.TextBox()
-        Me.txtc = New System.Windows.Forms.TextBox()
-        Me.txtx1 = New System.Windows.Forms.TextBox()
         Me.txtx2 = New System.Windows.Forms.TextBox()
+        Me.txtx1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -67,15 +68,26 @@ Partial Class formulageneralcuadratica
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Valores a ingresar"
         '
-        'Label2
+        'txtc
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 93)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(22, 21)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "c:"
+        Me.txtc.Location = New System.Drawing.Point(49, 96)
+        Me.txtc.Name = "txtc"
+        Me.txtc.Size = New System.Drawing.Size(82, 20)
+        Me.txtc.TabIndex = 5
+        '
+        'txtb
+        '
+        Me.txtb.Location = New System.Drawing.Point(49, 65)
+        Me.txtb.Name = "txtb"
+        Me.txtb.Size = New System.Drawing.Size(82, 20)
+        Me.txtb.TabIndex = 4
+        '
+        'txta
+        '
+        Me.txta.Location = New System.Drawing.Point(49, 35)
+        Me.txta.Name = "txta"
+        Me.txta.Size = New System.Drawing.Size(82, 20)
+        Me.txta.TabIndex = 3
         '
         'Label3
         '
@@ -86,6 +98,16 @@ Partial Class formulageneralcuadratica
         Me.Label3.Size = New System.Drawing.Size(23, 21)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "b:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(22, 21)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "c:"
         '
         'Label4
         '
@@ -114,40 +136,12 @@ Partial Class formulageneralcuadratica
         Me.GroupBox2.Controls.Add(Me.txtx1)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Location = New System.Drawing.Point(159, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(171, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(141, 129)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ressultados"
-        '
-        'txta
-        '
-        Me.txta.Location = New System.Drawing.Point(49, 35)
-        Me.txta.Name = "txta"
-        Me.txta.Size = New System.Drawing.Size(82, 20)
-        Me.txta.TabIndex = 3
-        '
-        'txtb
-        '
-        Me.txtb.Location = New System.Drawing.Point(49, 65)
-        Me.txtb.Name = "txtb"
-        Me.txtb.Size = New System.Drawing.Size(82, 20)
-        Me.txtb.TabIndex = 4
-        '
-        'txtc
-        '
-        Me.txtc.Location = New System.Drawing.Point(49, 96)
-        Me.txtc.Name = "txtc"
-        Me.txtc.Size = New System.Drawing.Size(82, 20)
-        Me.txtc.TabIndex = 5
-        '
-        'txtx1
-        '
-        Me.txtx1.Location = New System.Drawing.Point(47, 46)
-        Me.txtx1.Name = "txtx1"
-        Me.txtx1.Size = New System.Drawing.Size(80, 20)
-        Me.txtx1.TabIndex = 5
         '
         'txtx2
         '
@@ -156,10 +150,17 @@ Partial Class formulageneralcuadratica
         Me.txtx2.Size = New System.Drawing.Size(80, 20)
         Me.txtx2.TabIndex = 6
         '
+        'txtx1
+        '
+        Me.txtx1.Location = New System.Drawing.Point(47, 46)
+        Me.txtx1.Name = "txtx1"
+        Me.txtx1.Size = New System.Drawing.Size(80, 20)
+        Me.txtx1.TabIndex = 5
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(206, 147)
+        Me.Button1.Location = New System.Drawing.Point(258, 147)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(54, 23)
         Me.Button1.TabIndex = 7
@@ -169,7 +170,7 @@ Partial Class formulageneralcuadratica
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(146, 147)
+        Me.Button2.Location = New System.Drawing.Point(99, 147)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(54, 23)
         Me.Button2.TabIndex = 8
@@ -179,19 +180,30 @@ Partial Class formulageneralcuadratica
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(54, 147)
+        Me.Button3.Location = New System.Drawing.Point(7, 147)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(86, 23)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "CALCULATE"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button4.Location = New System.Drawing.Point(159, 147)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(93, 23)
+        Me.Button4.TabIndex = 10
+        Me.Button4.Text = "Regresar Menu"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'formulageneralcuadratica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(314, 177)
+        Me.ClientSize = New System.Drawing.Size(335, 177)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button2)
@@ -227,4 +239,5 @@ Partial Class formulageneralcuadratica
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
