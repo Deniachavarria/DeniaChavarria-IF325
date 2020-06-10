@@ -99,7 +99,7 @@
             txtResultado.Text = RESUL
         End If
         lista = lista + RESUL
-        txtlista.Text = lista
+        txtlista.Text = MsgBox(lista)
     End Sub
 
     Private Sub btnmulti_Click(sender As Object, e As EventArgs) Handles btnmulti.Click
