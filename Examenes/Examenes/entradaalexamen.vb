@@ -12,7 +12,7 @@ Public Class entradaalexamen
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnusuarioo.Click
         If txtusuario.Text = "" Or txtcontraseña.Text = "" Then
             MsgBox("Debe verificar que su usuario y contraseña no se encuentren vacios", vbInformation)
         Else
@@ -40,7 +40,9 @@ Public Class entradaalexamen
     End Sub
 
     Private Sub txtusuario_MouseHover(sender As Object, e As EventArgs) Handles txtusuario.MouseHover
-
+        Toolmsj.SetToolTip(txtusuario, "Debe ingresar su nuevo usuario")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
@@ -58,8 +60,13 @@ Public Class entradaalexamen
         If txtusuarioco.Text = usuarioc And txtcontraseñaco.Text = contraseñac Then
             Me.Hide()
             ExamenIP.Show()
+
+        ElseIf txtusuarioco.Text = "" And txtcontraseñaco.Text = "" Then
+            MsgBox("Debe ingresar lo solicitado", vbInformation)
         Else
             MsgBox("Usuario o contraseña incorrecta", vbInformation)
+            txtusuarioco.Clear()
+            txtusuario.Focus()
         End If
     End Sub
 
@@ -115,5 +122,51 @@ Public Class entradaalexamen
         Else
             Me.Errorvalidating.SetError(sender, "Es un campo obligatorio, ingrese su nueva contraseña")
         End If
+    End Sub
+
+    Private Sub btnnuevo_MouseHover(sender As Object, e As EventArgs) Handles btnnuevo.MouseHover
+        Toolmsj.SetToolTip(btnnuevo, "Crea un nuevo usuario")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btniniciar_MouseHover(sender As Object, e As EventArgs) Handles btniniciar.MouseHover
+        Toolmsj.SetToolTip(btniniciar, "Inicia seccion")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtusuarioco_MouseHover(sender As Object, e As EventArgs) Handles txtusuarioco.MouseHover
+        Toolmsj.SetToolTip(txtusuarioco, "Debe ingresar su usuario")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtcontraseñaco_MouseHover(sender As Object, e As EventArgs) Handles txtcontraseñaco.MouseHover
+        Toolmsj.SetToolTip(txtcontraseñaco, "Debe ingresar su contraseña")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtcontraseña_MouseHover(sender As Object, e As EventArgs) Handles txtcontraseña.MouseHover
+        Toolmsj.SetToolTip(txtcontraseña, "Crea su contraseña")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtconfirmo_TextChanged(sender As Object, e As EventArgs) Handles txtconfirmo.TextChanged
+
+    End Sub
+
+    Private Sub txtconfirmo_MouseHover(sender As Object, e As EventArgs) Handles txtconfirmo.MouseHover
+        Toolmsj.SetToolTip(txtconfirmo, "Confirme su contraseña")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles btnusuarioo.MouseHover
+        Toolmsj.SetToolTip(btnusuarioo, "Guardas su usuario")
+        Toolmsj.ToolTipTitle = "Entrada"
+        Toolmsj.ToolTipIcon = ToolTipIcon.Info
     End Sub
 End Class

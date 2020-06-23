@@ -277,9 +277,9 @@ Partial Class ExamenIP
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(12, 77)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(86, 14)
+        Me.Label16.Size = New System.Drawing.Size(91, 14)
         Me.Label16.TabIndex = 7
-        Me.Label16.Text = "Casos totales"
+        Me.Label16.Text = "Casos Activos"
         '
         'Label15
         '

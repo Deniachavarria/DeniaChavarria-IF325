@@ -26,7 +26,7 @@ Partial Class entradaalexamen
         Me.grbcrearusuario = New System.Windows.Forms.GroupBox()
         Me.txtconfirmo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnusuarioo = New System.Windows.Forms.Button()
         Me.txtcontraseña = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtusuario = New System.Windows.Forms.TextBox()
@@ -54,7 +54,7 @@ Partial Class entradaalexamen
         Me.grbcrearusuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.grbcrearusuario.Controls.Add(Me.txtconfirmo)
         Me.grbcrearusuario.Controls.Add(Me.Label4)
-        Me.grbcrearusuario.Controls.Add(Me.Button1)
+        Me.grbcrearusuario.Controls.Add(Me.btnusuarioo)
         Me.grbcrearusuario.Controls.Add(Me.txtcontraseña)
         Me.grbcrearusuario.Controls.Add(Me.Label2)
         Me.grbcrearusuario.Controls.Add(Me.txtusuario)
@@ -86,14 +86,14 @@ Partial Class entradaalexamen
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "C. CONTRASEÑA"
         '
-        'Button1
+        'btnusuarioo
         '
-        Me.Button1.Location = New System.Drawing.Point(116, 123)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(79, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Confirmar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnusuarioo.Location = New System.Drawing.Point(116, 123)
+        Me.btnusuarioo.Name = "btnusuarioo"
+        Me.btnusuarioo.Size = New System.Drawing.Size(79, 23)
+        Me.btnusuarioo.TabIndex = 4
+        Me.btnusuarioo.Text = "Confirmar"
+        Me.btnusuarioo.UseVisualStyleBackColor = True
         '
         'txtcontraseña
         '
@@ -172,7 +172,7 @@ Partial Class entradaalexamen
         '
         'txtcontraseñaco
         '
-        Me.txtcontraseñaco.Location = New System.Drawing.Point(128, 194)
+        Me.txtcontraseñaco.Location = New System.Drawing.Point(136, 191)
         Me.txtcontraseñaco.Name = "txtcontraseñaco"
         Me.txtcontraseñaco.Size = New System.Drawing.Size(100, 20)
         Me.txtcontraseñaco.TabIndex = 5
@@ -246,7 +246,7 @@ Partial Class entradaalexamen
     Friend WithEvents Label2 As Label
     Friend WithEvents txtusuario As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnusuarioo As Button
     Friend WithEvents Toolmsj As ToolTip
     Friend WithEvents btnnuevo As Button
     Friend WithEvents Label3 As Label
