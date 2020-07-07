@@ -79,6 +79,18 @@
     <Compile Include="Arreglos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="clientes.Designer.vb">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado.Designer.vb">
+      <DependentUpon>empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="libretadeahorro.Designer.vb">
       <DependentUpon>libretadeahorro.vb</DependentUpon>
     </Compile>
@@ -107,10 +119,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="productos.Designer.vb">
+      <DependentUpon>productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Arreglos.resx">
       <DependentUpon>Arreglos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado.resx">
+      <DependentUpon>empleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libretadeahorro.resx">
       <DependentUpon>libretadeahorro.vb</DependentUpon>
@@ -123,6 +147,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productos.resx">
+      <DependentUpon>productos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +187,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tumblr_ptfjlfzioO1ushzjw_540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnimizar_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horizontal_line_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
