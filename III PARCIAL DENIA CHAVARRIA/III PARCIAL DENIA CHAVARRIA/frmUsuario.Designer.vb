@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmUsuario
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FrmUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtencriptar = New System.Windows.Forms.TextBox()
@@ -40,11 +40,16 @@ Partial Class frmUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Pink
         Me.GroupBox1.Controls.Add(Me.txtencriptar)
         Me.GroupBox1.Controls.Add(Me.chbencriptar)
         Me.GroupBox1.Controls.Add(Me.cmbRol)
@@ -63,7 +68,7 @@ Partial Class frmUsuario
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(196, 243)
+        Me.GroupBox1.Size = New System.Drawing.Size(238, 243)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Usuario"
@@ -79,7 +84,7 @@ Partial Class frmUsuario
         'chbencriptar
         '
         Me.chbencriptar.AutoSize = True
-        Me.chbencriptar.Location = New System.Drawing.Point(36, 152)
+        Me.chbencriptar.Location = New System.Drawing.Point(44, 152)
         Me.chbencriptar.Name = "chbencriptar"
         Me.chbencriptar.Size = New System.Drawing.Size(124, 17)
         Me.chbencriptar.TabIndex = 15
@@ -202,21 +207,68 @@ Partial Class frmUsuario
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(15, 261)
+        Me.btnGuardar.BackColor = System.Drawing.Color.Pink
+        Me.btnGuardar.Location = New System.Drawing.Point(42, 290)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 1
         Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'frmUsuario
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.Pink
+        Me.btnBuscar.Location = New System.Drawing.Point(12, 261)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'btnModificar
+        '
+        Me.btnModificar.BackColor = System.Drawing.Color.Pink
+        Me.btnModificar.Location = New System.Drawing.Point(93, 261)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 3
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.BackColor = System.Drawing.Color.Pink
+        Me.btnEliminar.Location = New System.Drawing.Point(174, 261)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 4
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = False
+        '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.Pink
+        Me.btnSalir.Location = New System.Drawing.Point(132, 290)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 5
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = False
+        '
+        'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(222, 295)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(267, 324)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmUsuario"
+        Me.Name = "FrmUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUsuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -242,4 +294,8 @@ Partial Class frmUsuario
     Friend WithEvents btnGuardar As Button
     Friend WithEvents chbencriptar As CheckBox
     Friend WithEvents txtencriptar As TextBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnSalir As Button
 End Class
