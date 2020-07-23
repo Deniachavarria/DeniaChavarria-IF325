@@ -44,7 +44,10 @@ Partial Class FrmUsuario
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Datagrid = New System.Windows.Forms.DataGridView()
+        Me.btnordenar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.Datagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -84,7 +87,7 @@ Partial Class FrmUsuario
         'chbencriptar
         '
         Me.chbencriptar.AutoSize = True
-        Me.chbencriptar.Location = New System.Drawing.Point(44, 152)
+        Me.chbencriptar.Location = New System.Drawing.Point(20, 152)
         Me.chbencriptar.Name = "chbencriptar"
         Me.chbencriptar.Size = New System.Drawing.Size(124, 17)
         Me.chbencriptar.TabIndex = 15
@@ -208,7 +211,7 @@ Partial Class FrmUsuario
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.Pink
-        Me.btnGuardar.Location = New System.Drawing.Point(42, 290)
+        Me.btnGuardar.Location = New System.Drawing.Point(256, 176)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 1
@@ -218,7 +221,7 @@ Partial Class FrmUsuario
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.Pink
-        Me.btnBuscar.Location = New System.Drawing.Point(12, 261)
+        Me.btnBuscar.Location = New System.Drawing.Point(256, 63)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 2
@@ -228,7 +231,7 @@ Partial Class FrmUsuario
         'btnModificar
         '
         Me.btnModificar.BackColor = System.Drawing.Color.Pink
-        Me.btnModificar.Location = New System.Drawing.Point(93, 261)
+        Me.btnModificar.Location = New System.Drawing.Point(256, 89)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnModificar.TabIndex = 3
@@ -238,7 +241,7 @@ Partial Class FrmUsuario
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.Pink
-        Me.btnEliminar.Location = New System.Drawing.Point(174, 261)
+        Me.btnEliminar.Location = New System.Drawing.Point(256, 118)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 4
@@ -248,19 +251,39 @@ Partial Class FrmUsuario
         'btnSalir
         '
         Me.btnSalir.BackColor = System.Drawing.Color.Pink
-        Me.btnSalir.Location = New System.Drawing.Point(132, 290)
+        Me.btnSalir.Location = New System.Drawing.Point(256, 205)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 5
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'Datagrid
+        '
+        Me.Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Datagrid.Location = New System.Drawing.Point(353, 12)
+        Me.Datagrid.Name = "Datagrid"
+        Me.Datagrid.Size = New System.Drawing.Size(282, 243)
+        Me.Datagrid.TabIndex = 6
+        '
+        'btnordenar
+        '
+        Me.btnordenar.BackColor = System.Drawing.Color.Pink
+        Me.btnordenar.Location = New System.Drawing.Point(256, 147)
+        Me.btnordenar.Name = "btnordenar"
+        Me.btnordenar.Size = New System.Drawing.Size(75, 23)
+        Me.btnordenar.TabIndex = 7
+        Me.btnordenar.Text = "Ordenar"
+        Me.btnordenar.UseVisualStyleBackColor = False
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(267, 324)
+        Me.ClientSize = New System.Drawing.Size(657, 324)
+        Me.Controls.Add(Me.btnordenar)
+        Me.Controls.Add(Me.Datagrid)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
@@ -272,6 +295,7 @@ Partial Class FrmUsuario
         Me.Text = "frmUsuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.Datagrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -298,4 +322,6 @@ Partial Class FrmUsuario
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Datagrid As DataGridView
+    Friend WithEvents btnordenar As Button
 End Class

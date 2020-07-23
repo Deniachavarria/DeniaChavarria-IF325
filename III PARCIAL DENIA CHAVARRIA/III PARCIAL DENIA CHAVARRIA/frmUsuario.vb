@@ -22,11 +22,11 @@ Public Class FrmUsuario
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If validarCorreo(LCase(txtCorreo.Text)) = False Then
-            MessageBox.Show("Correo invalido, *username@midominio.com*", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Correo  no valido, *username@midominio.com*", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtCorreo.Focus()
             txtCorreo.SelectAll()
         Else
-            insertarUsuaurio()
+            insertarUsuario()
             MessageBox.Show("Correo valido", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
             conexion.conexion.Close()
 
@@ -34,7 +34,7 @@ Public Class FrmUsuario
 
 
     End Sub
-    Private Sub insertarUsuaurio()
+    Private Sub insertarUsuario()
         Dim idUsuario As Integer
         Dim nombre, apellido, userName, psw, correo, rol, estado As String
         idUsuario = txtCodigo.Text
@@ -47,10 +47,10 @@ Public Class FrmUsuario
         rol = cmbRol.Text
         Try
             If conexion.insertarUsuario(idUsuario, nombre, apellido, userName, psw, rol, estado, correo) Then
-                MessageBox.Show("Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(" Usuario Guardado Correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Limpiar()
             Else
-                MessageBox.Show("Error al guardar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al guardar Usuario", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 conexion.conexion.Close()
             End If
         Catch ex As Exception
@@ -64,7 +64,7 @@ Public Class FrmUsuario
         rol = cmbRol.Text
         Try
             If (conexion.eliminarUsuario(idUsuario, rol)) Then
-                MsgBox("Dado de baja")
+                MsgBox("Usuario Dado de baja")
 
             Else
                 MsgBox("Error al dar de baja usuario")
@@ -87,7 +87,7 @@ Public Class FrmUsuario
         rol = cmbRol.Text
         Try
             If conexion.modificarUsuario(idUsuario, nombre, apellido, userName, pws, rol, estado, correo) Then
-                MessageBox.Show("El Usuario a sido Modificado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("El Usuario fue Modificado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Limpiar()
             Else
                 MessageBox.Show("Error al modificar usuario", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -98,14 +98,19 @@ Public Class FrmUsuario
         End Try
     End Sub
     Private Sub BuscarUsuario()
-        Dim UserName As String
-        UserName = txtUserName.Text
+        Dim Username As String
+        Username = txtUserName.Text
         Try
-            If (conexion.BuscarUsuario(UserName)) Then
-                MsgBox("El Usuario ha  sido Encontrado correctamente")
 
+            Datagrid = conexion.BuscarUsuario(Username)
+            If Datagrid.Rows.Count <> 0 Then
+                MessageBox.Show("Usuario ha sido encontrado ", "Buscando Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Datagrid.DataSource = Datagrid
+                txtUserName.Text = ""
             Else
-                MsgBox("Error el usuario no ha sido  encontrado")
+                MessageBox.Show("El Usuario no ha sido  encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Datagrid.DataSource = Nothing
+                txtUserName.Text = ""
 
             End If
         Catch ex As Exception
@@ -149,5 +154,36 @@ Public Class FrmUsuario
             txtencriptar.Visible = False
             txtPsw.Visible = True
         End If
+    End Sub
+
+    Private Sub Datagrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Datagrid.CellContentClick
+        Dim i As Integer
+        i = Datagrid.CurrentRow.Index
+        txtCodigo.Text = Datagrid.Item(0, i).Value
+        txtNombre.Text = Datagrid.Item(1, i).Value
+        txtApellido.Text = Datagrid.Item(2, i).Value
+        txtPsw.Text = Datagrid.Item(3, i).Value
+        cmbRol.Text = Datagrid.Item(4, i).Value
+        txtUserName.Text = Datagrid.Item(5, i).Value
+        txtCorreo.Text = Datagrid.Item(6, i).Value
+    End Sub
+    Function cambia(ByVal cambiatext As String) As String
+        Dim a As String = StrConv(cambiatext, VbStrConv.ProperCase)
+        Return a
+    End Function
+    Private Sub ordenar()
+        Me.txtNombre.Text = cambia(Me.txtNombre.Text)
+        Me.txtApellido.Text = cambia(Me.txtApellido.Text)
+    End Sub
+
+    Private Sub minuscula()
+        Dim minus As String
+        minus = LCase(txtCorreo.Text)
+        txtCorreo.Text = minus
+    End Sub
+    Private Sub btnordenar_Click(sender As Object, e As EventArgs) Handles btnordenar.Click
+        ordenar()
+        minuscula()
+
     End Sub
 End Class

@@ -99,16 +99,19 @@ Public Class Conexion
             cmb.CommandType = CommandType.StoredProcedure
             cmb.Parameters.AddWithValue("@userName", userName)
 
-            If cmb.ExecuteNonQuery <> 0 Then
-                Return True
+            If cmb.ExecuteNonQuery Then
+                Dim Dgrid As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(Dgrid)
+                Return Dgrid
             Else
-                Return False
+                Return Nothing
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
-            Return False
+            Return Nothing
         Finally
-            conexion.Close()
+            Conexion.Close()
         End Try
     End Function
 
