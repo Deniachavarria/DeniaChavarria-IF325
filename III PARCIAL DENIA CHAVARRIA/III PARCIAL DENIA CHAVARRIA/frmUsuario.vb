@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 Public Class FrmUsuario
     Dim conexion As New conexion()
 
@@ -140,7 +141,7 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub chbencriptar_CheckedChanged(sender As Object, e As EventArgs) Handles chbencriptar.CheckedChanged
-        Dim cadena, cadena1, encriptar, desencriptar As String
+        Dim cadena, encriptar As String
         cadena = UCase(txtPsw.Text)
 
         If chbencriptar.Checked = True Then
@@ -156,17 +157,7 @@ Public Class FrmUsuario
         End If
     End Sub
 
-    Private Sub Datagrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Datagrid.CellContentClick
-        Dim i As Integer
-        i = Datagrid.CurrentRow.Index
-        txtCodigo.Text = Datagrid.Item(0, i).Value
-        txtNombre.Text = Datagrid.Item(1, i).Value
-        txtApellido.Text = Datagrid.Item(2, i).Value
-        txtPsw.Text = Datagrid.Item(3, i).Value
-        cmbRol.Text = Datagrid.Item(4, i).Value
-        txtUserName.Text = Datagrid.Item(5, i).Value
-        txtCorreo.Text = Datagrid.Item(6, i).Value
-    End Sub
+
     Function cambia(ByVal cambiatext As String) As String
         Dim a As String = StrConv(cambiatext, VbStrConv.ProperCase)
         Return a
@@ -185,5 +176,20 @@ Public Class FrmUsuario
         ordenar()
         minuscula()
 
+    End Sub
+    Private Sub Datagrid_SelectionChanged(sender As Object, e As EventArgs) Handles Datagrid.SelectionChanged
+
+
+        'Obtén el número de la fila que se seleccionó en el Datagridview
+        Dim FilaActual As Integer
+        FilaActual = Datagrid.CurrentRow.Index
+
+        txtCodigo.Text = Datagrid.Rows(FilaActual).Cells(0).Value
+        txtNombre.Text = Datagrid.Rows(FilaActual).Cells(1).Value
+        txtApellido.Text = Datagrid.Rows(FilaActual).Cells(2).Value
+        txtPsw.Text = Datagrid.Rows(FilaActual).Cells(3).Value
+        cmbRol.Text = Datagrid.Rows(FilaActual).Cells(4).Value
+        txtUserName.Text = Datagrid.Rows(FilaActual).Cells(5).Value
+        txtCorreo.Text = Datagrid.Rows(FilaActual).Cells(6).Value
     End Sub
 End Class

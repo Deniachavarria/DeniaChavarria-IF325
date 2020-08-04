@@ -19,7 +19,7 @@ Public Class Conexion
         End Try
     End Sub
     Public Function insertarUsuario(idUsuario As Integer, nombre As String, apellido As String, userName As String,
-                                    psw As String, rol As String, estado As String, correo As String)
+                                    Pws As String, rol As String, estado As String, correo As String)
         Try
             conexion.Open()
             cmb = New SqlCommand("insertarUsuario", conexion)
@@ -28,7 +28,7 @@ Public Class Conexion
             cmb.Parameters.AddWithValue("@nombre", nombre)
             cmb.Parameters.AddWithValue("@apellido", apellido)
             cmb.Parameters.AddWithValue("@userName", userName)
-            cmb.Parameters.AddWithValue("@psw", psw)
+            cmb.Parameters.AddWithValue("@Pws", Pws)
             cmb.Parameters.AddWithValue("@rol", rol)
             cmb.Parameters.AddWithValue("@estado", estado)
             cmb.Parameters.AddWithValue("@correo", correo)
@@ -114,5 +114,42 @@ Public Class Conexion
             Conexion.Close()
         End Try
     End Function
+    Public Function validarUusario(userName As String, pws As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("validarUusario", conexion)
+            cmb.CommandType = 4
+            cmb.Parameters.AddWithValue("@usuername", userName)
+            cmb.Parameters.AddWithValue("@pws", pws)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
 
+    Public Function consultarPSW(correo As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("buscarUsuarioPorCorreo", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@correo", correo)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
 End Class
